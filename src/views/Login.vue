@@ -5,8 +5,8 @@
             <p class="title">后台管理系统</p>
         </div>
         <div class="login-content">
-            <el-input placeholder='请输入账号' prefix-icon='el-icon-user' ></el-input>
-            <el-input placeholder='请输入密码' prefix-icon='el-icon-lock' show-password></el-input>
+            <el-input v-model="username" placeholder='请输入账号' prefix-icon='el-icon-user' ></el-input>
+            <el-input v-model="password" placeholder='请输入密码' prefix-icon='el-icon-lock' show-password></el-input>
             <el-button type="primary">登录</el-button>
         </div>
     </div>
@@ -14,7 +14,12 @@
 
 <script>
 export default {
-
+  data () {
+    return {
+      username: '',
+      password: ''
+    }
+  }
 }
 </script>
 
